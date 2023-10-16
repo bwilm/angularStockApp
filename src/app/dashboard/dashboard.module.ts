@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DashboardRoutingModule } from './dashboard.routing.module';
 import { DashboardComponent } from './dashboard.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { NewsService } from '../services/news.service';
 // import { DashboardService } from './dashboard.service';
 
 @NgModule({
@@ -10,7 +12,8 @@ import { DashboardComponent } from './dashboard.component';
   imports: [
     CommonModule,
     DashboardRoutingModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [NewsService],
 })
 export class DashboardModule {}
